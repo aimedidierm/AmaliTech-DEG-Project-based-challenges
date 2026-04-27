@@ -8,14 +8,24 @@ terraform {
     }
   }
 
-  # Uncomment and configure once your S3 backend bucket exists.
+  # Create the backend bucket manually before running terraform init.
+  # See README.md for setup instructions.
   # backend "s3" {
-  #   bucket = "your-terraform-state-bucket"
+  #   bucket = "vela-payments-tf-state"
   #   key    = "vela-payments/terraform.tfstate"
-  #   region = var.aws_region
+  #   region = "us-east-1"
   # }
 }
 
 provider "aws" {
-  region = var.aws_region
+  region                      = var.aws_region
+  skip_credentials_validation = true
+  skip_requesting_account_id  = true
+  skip_metadata_api_check     = true
+
+  default_tags {
+    tags = {
+      Project = "vela-payments"
+    }
+  }
 }
