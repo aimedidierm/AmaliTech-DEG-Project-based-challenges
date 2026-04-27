@@ -6,9 +6,42 @@ This repository contains the DEG training project challenges across multiple tra
 - Data Engineering
 - Fullstack
 - QA
-- DevOps
+- **DevOps** ← solutions by [@aimedidierm](https://github.com/aimedidierm)
 
 Each challenge is self-contained inside its folder and includes its own README with task details.
+
+---
+
+## DevOps Track — Solutions
+
+All three DevOps challenges have been completed and are in the [`dev-ops/`](./dev-ops/) directory.
+
+| # | Challenge | Description | Status |
+|---|-----------|-------------|--------|
+| 1 | [DeployReady](./dev-ops/DeployReady/) | Containerisation, CI/CD pipeline, cloud deployment | ✅ Done |
+| 2 | [InfraBlueprint](./dev-ops/InfraBlueprint/) | Infrastructure as Code with Terraform | ✅ Done |
+| 3 | [WatchTower](./dev-ops/WatchTower/) | Observability stack with Prometheus & Grafana | ✅ Done |
+
+### Stack used
+
+| Area | Tools |
+|------|-------|
+| Containerisation | Docker, Docker Compose |
+| CI/CD | GitHub Actions |
+| Container Registry | GitHub Container Registry (GHCR) |
+| Cloud | DigitalOcean (Droplet) |
+| IaC | Terraform (AWS provider) |
+| Observability | Prometheus, Grafana |
+
+### Development workflow
+
+Solutions were first developed and tested in a standalone repository —
+[`aimedidierm/amalitech-devops-challenges`](https://github.com/aimedidierm/amalitech-devops-challenges)
+— where each challenge was built, verified locally with `docker compose up --build`,
+and confirmed working (pipeline green, endpoints responding) before being migrated here
+into the correct `dev-ops/` structure for submission.
+
+---
 
 ## Applicant Guide
 
